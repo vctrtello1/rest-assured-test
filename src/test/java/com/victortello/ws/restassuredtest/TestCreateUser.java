@@ -53,7 +53,7 @@ class TestCreateUser {
 		userDetails.put("firstName", "victor");
 		userDetails.put("lastName", "tello");
 		userDetails.put("email", "victorhugotello@hotmail.com");
-		userDetails.put("password", "123");
+		userDetails.put("password", "puma18ar");
 		userDetails.put("addresses", userAddresses);
 
 		Response response = given().contentType("application/json").accept("application/json").body(userDetails).when()
