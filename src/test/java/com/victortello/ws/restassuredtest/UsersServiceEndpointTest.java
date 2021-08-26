@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Disabled;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -92,13 +93,14 @@ class UsersServiceEndpointTest {
 
 		List<Map<String, String>> storedAddresses = response.jsonPath().getList("addresses");
 
-		assertEquals("Serge", firstName);
-		assertEquals("Kargopolov", lastName);
+		assertEquals("hugo", firstName);
+		assertEquals("miramontes", lastName);
 		assertNotNull(storedAddresses);
 		assertTrue(addresses.size() == storedAddresses.size());
 		assertEquals(addresses.get(0).get("streetName"), storedAddresses.get(0).get("streetName"));
 	}
 
+	@Disabled
 	@Test
 	@Order(4)
 	final void deleteUserDetailsTest() {
